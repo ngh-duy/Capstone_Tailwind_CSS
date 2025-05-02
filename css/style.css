@@ -1,0 +1,75 @@
+:root{
+    --T-MColor: #757693;
+}
+body {
+    position: relative;
+    z-index: 1;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    color: rgb(117 118 147 / var(--tw-text-opacity));
+}
+.bg-zumthor{--tw-bg-opacity:1;background-color:rgb(237 245 255/var(--tw-bg-opacity))}
+.text-sectiontitle{font-size:14px;line-height:22px}
+.text-sectiontitle3{font-size:44px;line-height:55px}
+.shadow-solid-3{--tw-shadow:0px 6px 90px rgba(8,14,40,.04);--tw-shadow-colored:0px 6px 90px var(--tw-shadow-color)}
+.before\:bg-titlebg2:before {
+    content: var(--tw-content);
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 234 194/var(--tw-bg-opacity))
+}
+.before\:-z-1:before {
+    content: var(--tw-content);
+    z-index: -1
+}
+.xl\:text-hero {
+    font-size: 44px;
+    line-height: 58px
+}
+.border-stroke{
+    --tw-border-opacity: 1;
+    border-color: rgb(238 238 238 / var(--tw-border-opacity));
+}
+.border-strokedark{
+    --tw-border-opacity: 1;
+    border-color: rgb(45 47 64 / var(--tw-border-opacity)); /* strokedark */
+}
+.peer:checked ~ .peer-checked\:bg-primary { /* Custom color */
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 107 255 / var(--tw-bg-opacity));
+  }
+#dropdownNavbar::before {
+    content: "";
+    position: absolute;
+    bottom: 100%; 
+    left: 10%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    z-index: 0; 
+  
+    border-bottom: 9px solid #D1D5DB; 
+  }
+  
+  #dropdownNavbar::after {
+    content: "";
+    position: absolute;
+    bottom: 100%; 
+    left: 10%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    z-index: 1; /* Nằm trên ::before */
+    border-bottom: 8px solid white;
+  }
+  .hover\:shadow-solid-4:hover { /* Custom shadow */
+    --tw-shadow: 0px 6px 90px rgba(8, 14, 40, .1);
+    --tw-shadow-colored: 0px 6px 90px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }

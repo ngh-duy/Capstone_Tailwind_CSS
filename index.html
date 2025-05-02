@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <!--font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- WOW -->
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <header id="main-nav" class="fixed bg-white dark:bg-gray-900 fixed w-full z-999 top-0 start-0">
+        <div class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./images/logo-light.svg" class="h-8" alt="Flowbite Logo">
+            </a>
+            <div class="flex justify-between gap-6 lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse">
+                <a href="#" class="hidden lg:flex items-center text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"><i
+                        class="fa-solid fa-magnifying-glass fa" style="color: #979b9a;"></i></a>
+                <a href="#"  class="hidden lg:flex items-center text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"><img
+                        src="./images/icon-moon.svg" alt=""></a>
+                <a href="#" class="hidden lg:flex items-center text-[var(--T-MColor)] rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sign
+                    In</a>
+                <a href="#" class="hidden lg:flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out bg-[rgb(0,99,236)]">Sign
+                    Up</a>
+                <button data-collapse-toggle="navbar-sticky" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="navbar-sticky" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
+                <ul
+                    class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 md:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-white bg-blue-700 rounded-sm lg:bg-transparent lg:text-blue-700 lg:p-0 lg:dark:text-blue-500"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Features</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Docs</a>
+                    </li>
+                    <li id="Nav__Pages" class="group">
+                        <a href="#"
+                            class="block py-2 px-3 text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"><span
+                                class="pr-3">Pages</span> <i class="fa-solid fa-chevron-down"></i></a>
+                        <div id="dropdownNavbar"
+                            class="absolute top-full z-10 bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600  opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 ease-in-out">
+                            <ul class="py-2 px-4 text-gray-700 dark:text-gray-400 dropdown"
+                                aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="#"
+                                        class="block text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog
+                                        Grid</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sign
+                                        In</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Sign
+                                        Up</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Docs</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Support</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="block py-2 px-4 text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">404</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Support</a>
+                    </li>
+                    <li Class="flex justify-between lg:hidden">
+                        <a href="#"
+                            class="block py-2 px-3 text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"><i
+                            class="fa-solid fa-magnifying-glass fa" style="color: #979b9a;"></i></a>
+                        <a href="#" class="block py-2 px-3 text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Sign In</a>
+                        <a href="#" class="block py-2 px-3 text-[var(--T-MColor)]  items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out bg-[rgb(0,99,236)]">Sign Up</a>
+                        <a href="#" class="block py-2 px-3 text-[var(--T-MColor)]  rounded-sm hover:bg-gray-100 lg:hover:bg-transparent lg:hover:text-blue-700 lg:p-0 lg:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700"><img
+                            src="./images/icon-moon.svg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- CAROUSEL -->
+    <section class="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 2xl:px-0">
+            <div class="flex lg:items-center lg:gap-8 xl:gap-32.5">
+                <div class=" md:w-1/2">
+                    <h4 class="mb-4.5 text-lg font-medium text-black dark:text-white">🔥 Solid - A Complete SaaS Starter
+                        Template for SaaS</h4>
+                    <h1 class="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">Robust SaaS
+                        Boilerplate and Starter for<span
+                            class="relative ml-2.5 inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">Next.js</span>
+                    </h1>
+                    <p>Packed with all the key integrations you need for swift SaaS startup launch, including -
+                        Authentication, Database, Sanity Blog, Essential UI Components, Business Pages and More.
+                        Built-winth
+                        - Next.js, React 18 and TypeScript.</p>
+                    <div class="mt-10"><a aria-label="get started button"
+                            class="inline-block rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+                            href="#">Get Started</a></div>
+                </div>
+                <div class="animate_right hidden md:w-1/2 lg:block">
+                    <div class="relative 2xl:-mr-7.5">
+                        <img alt="shape" loading="lazy" width="46" height="246" decoding="async" data-nimg="1"
+                            class="absolute -left-11.5 top-0" src="./images/shape-01.png" style="color: transparent;">
+                        <img alt="shape" loading="lazy" width="36.9" height="36.7" decoding="async" data-nimg="1"
+                            class="absolute bottom-0 right-0 z-10" src="./images/shape-02.svg"
+                            style="color: transparent;">
+                        <img alt="shape" loading="lazy" width="21.64" height="21.66" decoding="async" data-nimg="1"
+                            class="absolute -right-6.5 bottom-0 z-1" src="./images/shape-03.svg"
+                            style="color: transparent;">
+                        <div class=" relative aspect-[700/444] w-full">
+                            <img alt="Hero" loading="lazy" decoding="async" data-nimg="fill"
+                                class="shadow-solid-l dark:hidden" src="./images/hero-light.svg"
+                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                            <img alt="Hero" loading="lazy" decoding="async" data-nimg="fill"
+                                class="hidden shadow-solid-l dark:block" src="./images/hero-dark.svg"
+                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRAND NAME -->
+    <section
+        class="border border-x-0 border-y-[rgb(235,235,235)] bg-[#FBFBFB]/1 py-11 dark:border-y-strokedark dark:bg-black">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 2xl:px-0">
+            <div class="grid grid-cols-3 items-center justify-center gap-7.5 lg:grid-cols-6 lg:gap-12.5 xl:gap-29">
+                <a href="#" class="animate__animated wow animate__fadeInDown mx-w-full relative block h-10 w-[98px]"
+                    style="opacity: 1; transform: none;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                        src="./images/brand-light-01.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+                        src="./images/brand-dark-01.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                </a>
+                <a href="#" class="animate__animated wow animate__fadeInDown mx-w-full relative block h-10 w-[98px]"
+                    style="opacity: 1; transform: none;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                        src="./images/brand-light-02.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+                        src="./images/brand-dark-02.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                </a>
+                <a href="#" class="animate__animated wow animate__fadeInDown mx-w-full relative block h-10 w-[98px]"
+                    style="opacity: 1; transform: none;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                        src="./images/brand-light-03.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+                        src="./images/brand-dark-03.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                </a>
+                <a href="#" class="animate__animated wow animate__fadeInDown mx-w-full relative block h-10 w-[98px]"
+                    style="opacity: 1; transform: none;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                        src="./images/brand-light-04.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+                        src="./images/brand-dark-04.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                </a>
+                <a href="#" class="animate__animated wow animate__fadeInDown mx-w-full relative block h-10 w-[98px]"
+                    style="opacity: 1; transform: none;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                        src="./images/brand-light-05.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+                        src="/images/brand/brand-dark-05.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                </a>
+                <a href="#" class="animate__animated wow animate__fadeInDown mx-w-full relative block h-10 w-[98px]"
+                    style="opacity: 1; transform: none;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="opacity-65 transition-all duration-300 hover:opacity-100 dark:hidden"
+                        src="./images/brand-light-06.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                    <img alt="Client" loading="lazy" decoding="async" data-nimg="fill"
+                        class="hidden opacity-50 transition-all duration-300 hover:opacity-100 dark:block"
+                        src="./images/brand-dark-06.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE -->
+    <section id="features" class="py-20 lg:py-25 xl:py-30">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 xl:px-0">
+            <div class="animate__animated wow animate__fadeInDown mx-auto text-center"
+                style="opacity: 1; transform: none;">
+                <div
+                    class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection">
+                    <span class="text-sectiontitle font-medium text-black dark:text-white">SOLID FEATURES</span>
+                </div>
+                <h2
+                    class="mx-auto mb-4 text-3xl font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">
+                    Core Features of Solid</h2>
+                <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    In
+                    convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
+                    ante in maximus.</p>
+            </div>
+            <div
+                class="bg-[#FBFBFB] mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
+                <div class="animate__animated wow animate__fadeInDown z-40 rounded-lg border border-white bg-white p-7.5 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity: 1; transform: none;">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                        <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            class="bg-blue-700" src="./images/icon-01.svg">
+                    </div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">Crafted
+                        for SaaS</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity: 1; transform: none;">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                        <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            class="bg-blue-700" src="./images/icon-02.svg">
+                    </div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                        High-quality Design</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity: 1; transform: none;">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                        <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            class="bg-blue-700" src="./images/icon-03.svg">
+                    </div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">Next.js +
+                        TypeScript</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity: 1; transform: none;">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                        <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            src="./images/icon-04.svg" class="bg-blue-700">
+                    </div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">Sanity
+                        Blog and Docs</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity: 1; transform: none;">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                        <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            src="./images/icon-05.svg" class="bg-blue-700">
+                    </div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">DB, Auth
+                        and Stripe</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown z-40 rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                    style="opacity: 1; transform: none;">
+                    <div class="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-primary">
+                        <img alt="title" loading="lazy" width="36" height="36" decoding="async" data-nimg="1"
+                            src="./images/icon-06.svg" class="bg-blue-700">
+                    </div>
+                    <h3 class="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">Regular
+                        Free Updates</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 xl:px-0">
+            <div class="flex items-center gap-8 lg:gap-32.5">
+                <div class="animate__animated wow animate__fadeInLeft relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
+                    style="opacity: 1; transform: none;">
+                    <img alt="About" loading="lazy" decoding="async" data-nimg="fill" class="dark:hidden" sizes="100vw"
+                        src="./images/about-light-01.png"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                    <img alt="About" loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block"
+                        sizes="100vw" src="./images/about-dark-01.png"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                </div>
+                <div class="animate__animated wow animate__fadeInRight md:w-1/2" style="opacity: 1; transform: none;">
+                    <h4 class="font-medium uppercase text-black dark:text-white">
+                        <span
+                            class="mb-4 mr-4 inline-flex rounded-full bg-meta px-4.5 py-1 text-metatitle uppercase text-white ">New</span>
+                        SaaS Boilerplate for Next.js
+                    </h4>
+                    <h2 class="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">A Complete
+                        Solution for<span
+                            class="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">SaaS
+                            Startup</span>
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum
+                        ultrices. Fusce consectetur le.</p>
+                    <div class="mt-7.5 flex items-center gap-5">
+                        <div
+                            class="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                            <p class="text-metatitle2 font-semibold text-black dark:text-white">01</p>
+                        </div>
+                        <div class="w-3/4">
+                            <h3 class="mb-0.5 text-metatitle2 text-black dark:text-white">Mailchimp for Newsletter
+                                Emails + SMTP for Transactional Emails</h3>
+                            <p>Ut ultricies lacus non fermentum ultrices.</p>
+                        </div>
+                    </div>
+                    <div class="mt-7.5 flex items-center gap-5">
+                        <div
+                            class="flex h-15 w-15 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                            <p class="text-metatitle2 font-semibold text-black dark:text-white">02</p>
+                        </div>
+                        <div class="w-3/4">
+                            <h3 class="mb-0.5 text-metatitle2 text-black dark:text-white">Algolia Integration for Site
+                                Search</h3>
+                            <p>consectetur adipiscing elit fermentum ultricies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="mx-auto max-w-screen-2xl overflow-hidden px-4 md:px-8 2xl:px-0">
+            <div class="flex items-center gap-8 lg:gap-32.5">
+                <div class="animate__animated wow animate__fadeInLeft md:w-1/2" style="opacity: 1; transform: none;">
+                    <h4 class="font-medium uppercase text-black dark:text-white">Launch Your SaaS Fast
+
+                    </h4>
+                    <h2 class="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">Packed with All
+                        Essential<span
+                            class="relative ml-2.5 inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">Integrations</span>
+                    </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus non fermentum
+                        ultrices. Fusce consectetur le.</p>
+                    <div><a href="#"
+                            class="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"><span
+                                class="duration-300 group-hover:pr-2">Know More</span><svg width="14" height="14"
+                                viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M10.4766 6.16664L6.00658 1.69664L7.18492 0.518311L13.6666 6.99998L7.18492 13.4816L6.00658 12.3033L10.4766 7.83331H0.333252V6.16664H10.4766Z"
+                                    fill="currentColor"></path>
+                            </svg></a></div>
+                </div>
+                <div class="animate__animated wow animate__fadeInRight relative mx-auto hidden aspect-[588/526.5] md:block md:w-1/2"
+                    style="opacity: 1; transform: none;"><img alt="About" loading="lazy" decoding="async"
+                        data-nimg="fill" class="dark:hidden" src="./images/about-light-02.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"><img
+                        alt="About" loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block"
+                        src="./images/about-dark-02.svg"
+                        style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLID -->
+    <section class="relative pb-20 pt-18.5 lg:pb-22.5">
+        <div class="relative mx-auto max-w-screen-2xl px-4 md:px-8 2xl:px-0">
+            <div class="absolute -top-16 -z-1 mx-auto h-[350px] w-[90%]">
+                <img alt="Dotted Shape" loading="lazy" decoding="async" data-nimg="fill" class="dark:hidden"
+                    src="./images/shape-dotted-light.svg"
+                    style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                <img alt="Dotted Shape" loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block"
+                    src="./images/shape-dotted-dark.svg"
+                    style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            </div>
+            <div class="dark:border-gray-700">
+                <ul class="animate__animated wow animate__fadeInDown mb-15 flex flex-wrap justify-center rounded-[10px] border border-stroke bg-white shadow-solid-5 dark:border-strokedark dark:bg-blacksection dark:shadow-solid-6 md:flex-nowrap md:items-center lg:gap-7.5 xl:mb-21.5 xl:gap-12.5"
+                    style="opacity: 1; transform: none;" id="default-tab" data-tabs-toggle="#default-tab-content"
+                    role="tablist">
+                    <li class="me-2" role="presentation">
+                        <button
+                            class="p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 relative flex w-full cursor-pointer items-center gap-4 px-6 py-2"
+                            id="profile-tab" data-tabs-target="#profile" type="button" role="tab"
+                            aria-controls="profile" aria-selected="false">
+                            <div
+                                class="flex h-12.5 w-12.5 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                                <p class="text-metatitle3 font-medium text-black dark:text-white">01</p>
+                            </div>
+                            <div class="md:w-3/5 lg:w-auto">
+                                <p class="text-sm font-medium text-black dark:text-white xl:text-regular">Clean User
+                                    Interface
+                                </p>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button
+                            class="p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 relative flex w-full cursor-pointer items-center gap-4 px-6 py-2"
+                            id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
+                            aria-controls="dashboard" aria-selected="false">
+                            <div
+                                class="flex h-12.5 w-12.5 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                                <p class="text-metatitle3 font-medium text-black dark:text-white">02</p>
+                            </div>
+                            <div class="md:w-3/5 lg:w-auto">
+                                <p class="text-sm font-medium text-black dark:text-white xl:text-regular">Essential
+                                    Business
+                                    Pages</p>
+                            </div>
+                        </button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button
+                            class="p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 relative flex w-full cursor-pointer items-center gap-4 px-6 py-2"
+                            id="settings-tab" data-tabs-target="#settings" type="button" role="tab"
+                            aria-controls="settings" aria-selected="false">
+                            <div
+                                class="flex h-12.5 w-12.5 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
+                                <p class="text-metatitle3 font-medium text-black dark:text-white">03</p>
+                            </div>
+                            <div class="md:w-3/5 lg:w-auto">
+                                <p class="text-sm font-medium text-black dark:text-white xl:text-regular">Fully
+                                    Functional Integrations</p>
+                            </div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div id="default-tab-content" class="animate__animated wow animate__fadeInDown mx-auto max-w-screen-2xl"
+                style="opacity: 1; transform: none;">
+                <div class="hidden  p-4 rounded-lg" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="flex items-center gap-8 lg:gap-19">
+                        <div class="md:w-1/2">
+                            <h2 class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2">Solid
+                                UI with Solid Features.</h2>
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus
+                                non fermentum ultrices. Fusce consectetur le.</p>
+                            <p class="w-11/12"> Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus
+                                sagittis. Nulla ligula nunc egestas ut.</p>
+                        </div>
+                        <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                            <img alt="Solid UI with Solid Features." loading="lazy" decoding="async" data-nimg="fill"
+                                class="dark:hidden" sizes="100vw" src="./images/features-light-01.png"
+                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                            <img alt="Solid UI with Solid Features." loading="lazy" decoding="async" data-nimg="fill"
+                                class="hidden dark:block" src="./images/features-dark-01.svg"
+                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden p-4 rounded-lg " id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <div class="flex items-center gap-8 lg:gap-19">
+                        <div class="md:w-1/2">
+                            <h2 class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2">Pages
+                                and UI Components You Need for a SaaS.</h2>
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus
+                                non fermentum ultrices. Fusce consectetur le.</p>
+                            <p class="w-11/12"> Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus
+                                sagittis. Nulla ligula nunc egestas ut.</p>
+                        </div>
+                        <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                            <img alt="Pages and UI Components You Need for a SaaS." loading="lazy" decoding="async"
+                                data-nimg="fill" class="dark:hidden" sizes="100vw" src="./images/features-light-01.png"
+                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                            <img alt="Pages and UI Components You Need for a SaaS." loading="lazy" decoding="async"
+                                data-nimg="fill" class="hidden dark:block" src="./images/features-dark-01.svg"
+                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden p-4 rounded-lg" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                    <div class="flex items-center gap-8 lg:gap-19">
+                        <div class="md:w-1/2">
+                            <h2 class="mb-7 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle2">
+                                Functional Blog, DB, Auth and Many More</h2>
+                            <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultricies lacus
+                                non fermentum ultrices. Fusce consectetur le.</p>
+                            <p class="w-11/12">Nam id eleifend dui, id iaculis purus. Etiam lobortis neque nec finibus
+                                sagittis. Nulla ligula nunc egestas ut.</p>
+                        </div>
+                        <div class="relative mx-auto hidden aspect-[562/366] max-w-[550px] md:block md:w-1/2">
+                            <img alt="Functional Blog, DB, Auth and Many More" loading="lazy" decoding="async"
+                                data-nimg="fill" class="dark:hidden" sizes="100vw" src="./images/features-light-01.png"
+                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                            <img alt="Functional Blog, DB, Auth and Many More" loading="lazy" decoding="async"
+                                data-nimg="fill" class="hidden dark:block" src="./images/features-dark-01.svg"
+                                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUSTBY -->
+    <section class="px-4 py-20 md:px-8 lg:py-22.5 2xl:px-0">
+        <div
+            class="relative z-1 mx-auto max-w-screen-2xl  rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-22.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark xl:py-27.5">
+            <img alt="Man" loading="lazy" width="335" height="384" decoding="async" data-nimg="1"
+                class="absolute -left-15 -top-25 -z-1 lg:left-0" src="./images/shape-04.png"
+                style="color: transparent;">
+            <img alt="Doodle" loading="lazy" width="132" height="132" decoding="async" data-nimg="1"
+                class="absolute bottom-0 right-0 -z-1" src="./images/shape-05.png" style="color: transparent;">
+            <img alt="Dotted" loading="lazy" decoding="async" data-nimg="fill"
+                class="absolute left-0 top-0 -z-1 dark:hidden" src="./images/shape-dotted-light-02.svg"
+                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            <img alt="Dotted" loading="lazy" decoding="async" data-nimg="fill"
+                class="absolute left-0 top-0 -z-1 hidden dark:block" src="./images/shape-dotted-dark-02.svg"
+                style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            <div class="animate__animated wow animate__fadeInDown mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
+                style="opacity: 1; transform: none;">
+                <h2 class="mb-4 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">Trusted by Global
+                    Companies.</h2>
+                <p class="mx-auto lg:w-11/12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis
+                    tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 lg:gap-42.5">
+                <div class="animate__animated wow animate__fadeInDown text-center" style="opacity: 1; transform: none;">
+                    <h3 class="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">500K</h3>
+                    <p class="text-lg lg:text-para2">World Wide Clients</p>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown text-center" style="opacity: 1; transform: none;">
+                    <h3 class="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">1M+</h3>
+                    <p class="text-lg lg:text-para2">Downloads</p>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown text-center" style="opacity: 1; transform: none;">
+                    <h3 class="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">865</h3>
+                    <p class="text-lg lg:text-para2">Winning Award</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERGRATION -->
+    <section>
+        <div class="mx-auto max-w-screen-2xl px-4 md:px-8 2xl:px-0">
+            <div class="animate__animated wow animate__fadeInDown mx-auto text-center"
+                style="opacity: 1; transform: none;">
+                <div
+                    class="mb-4 inline-block rounded-full bg-zumthor px-4.5 py-1.5 dark:border dark:border-strokedark dark:bg-blacksection">
+                    <span class="text-sectiontitle font-medium text-black dark:text-white">INTEGRATIONS</span>
+                </div>
+                <h2
+                    class="mx-auto mb-4 text-3xl font-bold text-black dark:text-white md:w-4/5 xl:w-1/2 xl:text-sectiontitle3">
+                    Packed with all the key integrations you need</h2>
+                <p class="mx-auto md:w-4/5 lg:w-3/5 xl:w-[46%]">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.</p>
+            </div>
+        </div>
+        <div
+            class="pattern-dots pattern-blue-500 pattern-bg-white pattern-size-4 pattern-opacity-10 relative z-50 mx-auto mt-15 max-w-screen-2xl px-4 md:px-8 xl:mt-20 xl:px-0">
+            <div class="absolute -top-3/4 left-0 right-0 -z-1 mx-auto h-full w-full">
+                <img alt="Dotted" loading="lazy" width="1200" height="400" decoding="async" data-nimg="1"
+                    class="dark:hidden" src="./images/shape-dotted-light.svg"
+                    style="color: transparent; position: static;">
+                <img alt="Dotted" loading="lazy" decoding="async" data-nimg="fill" class="hidden dark:block"
+                    src="./images/shape-dotted-dark.svg"
+                    style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            </div>
+            <div class="flex flex-wrap justify-around gap-y-10">
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1"
+                            src="./images/brand-07.svg" style="color: transparent">
+                    </div>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;"></div>
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1"
+                            src="./images/brand-08.svg" style="color: transparent;">
+                    </div>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;">
+                    <div class="h-[11px] w-[11px] rounded-full bg-[#FFDB26]"></div>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1"
+                            src="./images/brand-09.svg" style="color: transparent;">
+                    </div>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;"></div>
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;">
+                    <div class="h-[15px] w-[15px] rounded-full bg-[#62E888]"></div>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1"
+                            src="./images/brand-10.svg" style="color: transparent;">
+                    </div>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;">
+                    <div class="h-[23px] w-[23px] rounded-full bg-[#EF5C00]"></div>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1"
+                            src="./images/brand-11.svg" style="color: transparent;">
+                    </div>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;">
+                    <div class="h-[15px] w-[15px] rounded-full bg-[#016BFF]"></div>
+                </div>
+                <div class="animate__animated wow animate__fadeInDown w-1/6" style="opacity: 1; transform: none;">
+                    <div class="inline-block rounded-[10px] bg-white p-4.5 shadow-solid-7 dark:bg-btndark">
+                        <img alt="Brand" loading="lazy" width="50" height="50" decoding="async" data-nimg="1"
+                            src="./images/brand-12.svg" style="color: transparent;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script src="./js/Navbar.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+</body>
+
+</html>
